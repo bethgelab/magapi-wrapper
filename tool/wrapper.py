@@ -21,7 +21,7 @@ def parse_args():
         '--save',
         default=False,
         action='store_true',
-        help="Path to store the file. By default it will be in Downloads"
+        help="Flag to enable saving data to file. By default it will be in Downloads"
     )
     parser.add_argument(
         '--format',
