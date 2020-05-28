@@ -128,7 +128,7 @@ For example I want to get all the papers which are ciiting the paper `Image Styl
 8 **Retrieve study fields**
 
   ```
-    mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --entity="study field" --FN="physics,machine learning"
+    mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --entity="study field" --FN="deep learning,machine learning"
   ```
 
 9 **Retrieve publications from different universities/institutions.
