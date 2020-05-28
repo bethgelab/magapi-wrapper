@@ -75,30 +75,30 @@ Once you have the key, you can use the key to retrieve the data.
 
 ### Examples
 
+Using `64d4420ee3584a6d81feac210a7e5019` as a dummy key.  
 
 1 **Retrieve 100 papers from one Author and save to file in csv format**
 
  ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --AA.AuN="matthias bethge" --count=100
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --AA.AuN="matthias bethge" --count=100
 
  ```
 2 **Retrieve All papers from author from year between 2015 and 2020**
 
   ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --AA.AuN="matthias bethge" -Y=2015,2020
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=1000 --AA.AuN="matthias bethge" -Y=2015,2020
 
   ```
 3 **Retrieve papers from author with specific affiliation**
     
   ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --AA.AuN="matthias bethge" --AA.AfN="university of tuebingen"
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=10000 --AA.AfN="university of tuebingen,university of stuttgart" 
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=1000 --AA.AuN="matthias bethge" --AA.AfN="university of tuebingen"
 
   ```
 4 **Retrieve all papers from two authors**
 
   ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --AA.AuN="matthias bethge,wieland brendel"
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=1000 --AA.AuN="matthias bethge,wieland brendel"
 
   ```
 5 **Retrieve all the papers which are citing specific paper/s**
@@ -106,7 +106,7 @@ Once you have the key, you can use the key to retrieve the data.
 For example I want to get all the papers which are ciiting the paper `Image Style Transfer Using Convolutional Neural Networks`
 
   ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --Ti="Image Style Transfer Using Convolutional Neural Networks" --citations
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=1000 --Ti="Image Style Transfer Using Convolutional Neural Networks" --citations
 
   ```
 
@@ -116,20 +116,27 @@ For example I want to get all the papers which are ciiting the paper `Image Styl
 
 
   ```
-   mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --AA.AfN="University of tuebingen" --F.FN="machine learning"
+   mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=1000 --AA.AfN="University of tuebingen" --F.FN="machine learning"
 
   ```
 7 **Retrieve author profiles**
 
   ```
-    mag-api llohgdu786786gsufzsazf --save --format=csv --entity=author --AuN="matthias bethge,wieland brendel"
+    mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --entity=author --AuN="matthias bethge,wieland brendel"
   ```
    
 8 **Retrieve study fields**
 
   ```
-    mag-api llohgdu786786gsufzsazf --save --format=csv --entity="study field" --FN="physics,machine learning"
+    mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --entity="study field" --FN="physics,machine learning"
   ```
+
+9 **Retrieve publications from different universities/institutions.
+
+```
+mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=10000 --AA.AfN="university of tuebingen,university of stuttgart"
+
+```
 
 ## References
 1. https://docs.microsoft.com/en-us/academic-services/graph/
