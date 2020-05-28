@@ -131,7 +131,7 @@ For example I want to get all the papers which are ciiting the paper `Image Styl
     mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --entity="study field" --FN="deep learning,machine learning"
   ```
 
-9 **Retrieve publications from different universities/institutions.
+9 **Retrieve publications from different universities/institutions.**
 
 ```
 mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=10000 --AA.AfN="university of tuebingen,university of stuttgart"
