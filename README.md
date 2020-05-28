@@ -28,6 +28,52 @@ or
 ## Get Started
 
 To access the data from Microsoft Academic Knowledge you need a key. Visit [here](https://msr-apis.portal.azure-api.net/) and subscribe.
+Once you have the key, you can use the key to retrieve the data.
+
+### Usage
+
+`mag-api` is a console script, it can be called with your key and other optional arguments.
+
+`mag-api key [optional-args]` 
+
+
+
+*  key                   Key from Microsoft Academic Knowledge API. Visit
+                        https://msr-apis.portal.azure-api.net/ to get your key
+
+
+*  --entity {paper,author,affiliation,study field}
+                        Entity type to download
+*  --save                Path to store the file. By default it will be in
+                        Downloads
+*  --format {csv,json}
+*  --count count         Number documents to be downloaded
+*  --AA.AfId affiliation_id
+                        Author affiliation id
+*  --AA.AfN affiliation_name
+                        Author affiliation name, comma separated values for
+                        more than one value
+*  --AA.AuId AA.AUID     Author Id from Microsoft Academic, comma separated ids
+                        for more than one. You can get the ID from
+                        https://academic.microsoft.com
+*  --AA.AuN author_name  Author name. Comma separated names for multiple
+                        authors
+*  --D publication_date  Date published in YYYY-MM-DD format. Which accepts <,
+                        > and range
+*  --F.FN study_field    Field of study. Comma separated values for more than
+                        one field
+*  --Id paper_id         Paper ID from Microsoft Academic Graph. You can get
+                        the ID from https://academic.microsoft.com
+*  --Ti title            Paper title. This will not accept only English
+                        characters
+*  --Y publication_year  Publication Year. It can also accepts >, < and <>
+*  --citations           This field returns all the cited papers for given
+                        titles or paper ids
+*  --AuN author_name     Author name/s to download authors profile
+*  --FN field_name       Field of study to download Study field statistics
+
+
+### Examples
 
 
 1 **Retrieve 100 papers from one Author and save to file in csv format**
@@ -46,6 +92,7 @@ To access the data from Microsoft Academic Knowledge you need a key. Visit [here
     
   ```
    mag-api llohgdu786786gsufzsazf --save --format=csv --count=1000 --AA.AuN="matthias bethge" --AA.AfN="university of tuebingen"
+   mag-api llohgdu786786gsufzsazf --save --format=csv --count=10000 --AA.AfN="university of tuebingen,university of stuttgart" 
 
   ```
 4 **Retrieve all papers from two authors**

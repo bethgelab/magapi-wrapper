@@ -32,47 +32,56 @@ def parse_args():
     parser.add_argument(
         '--count',
         type=int,
+        metavar="count",
         default=100,
-        help="Number documents to download"
+        help="Number documents to be downloaded"
     )
     parser.add_argument(
         '--AA.AfId',
         type=str,
+        metavar="affiliation_id",
         help='Author affiliation id')
     parser.add_argument(
         '--AA.AfN',
         type=str,
+        metavar="affiliation_name",
         help='Author affiliation name, comma separated values for more than one value')
     parser.add_argument(
         '--AA.AuId',
         type=str,
-        help='Author Id from Microsoft Academic. Comma separated ids')
+        help='Author Id from Microsoft Academic, comma separated ids for more than one. You can get the ID from https://academic.microsoft.com')
     parser.add_argument(
         '--AA.AuN',
         type=str,
+        metavar="author_name",
         help='Author name. Comma separated names for multiple authors')
     parser.add_argument(
         '--D',
         type=str,
-        help='Date published in YYYY-MM-DD format')
+        metavar="publication_date",
+        help='Date published in YYYY-MM-DD format. Which accepts <, > and range')
     parser.add_argument(
         '--F.FN',
         type=str,
+        metavar="study_field",
         help="Field of study. Comma separated values for more than one field"
     )
     parser.add_argument(
         '--Id',
         type=int,
-        help="Paper ID from Microsoft Academic"
+        metavar="paper_id",
+        help="Paper ID from Microsoft Academic Graph. You can get the ID from https://academic.microsoft.com"
     )
     parser.add_argument(
         '--Ti',
         type=str,
-        help="Paper title"
+        metavar="title",
+        help="Paper title. This will not accept only English characters"
     )
     parser.add_argument(
         '--Y',
         type=str,
+        metavar="publication_year",
         help="Publication Year. It can also accepts >, < and <>"
     )
     parser.add_argument(
@@ -84,12 +93,14 @@ def parse_args():
     parser.add_argument(
         '--AuN',
         type=str,
+        metavar="author_name",
         help="Author name/s to download authors profile"
     )
     parser.add_argument(
         '--FN',
         type=str,
-        help="Author name/s to download authors profile"
+        metavar="field_name",
+        help="Field of study to download Study field statistics"
     )
 
     args = parser.parse_args()
