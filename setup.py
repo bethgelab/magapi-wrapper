@@ -36,7 +36,7 @@ setup(
     keywords="Microsoft Academic graph, MAG, Knowledge API, Publications",
     author="Kantharaju Narayanappa",
     author_email="kantharajucn@outlook.com",
-    url="https://github.com/bethgelab/magapi_wrapper",
+    url="https://github.com/bethgelab/magapi-wrapper",
     license="",
     packages=find_packages(),
     include_package_data=True,
