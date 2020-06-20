@@ -145,5 +145,5 @@ mag-api 64d4420ee3584a6d81feac210a7e5019 --save --format=csv --count=10000 --AA.
 
 ## Contact
 
-This repo is currently maintained by Kantharaju Narayanappa ([@kantharajucn](http://github.com/kantharaju)).
+This repo is currently maintained by Kantharaju Narayanappa ([@kantharajucn](https://github.com/kantharajucn)).
 If you find any bugs or incorrect data please report.
